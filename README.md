@@ -32,3 +32,6 @@ A "Refresh" button that generates a new passcode immediately, resetting the time
 The user views the passcode on the app and enters it on the office website's Two-Factor Authentication (2FA) page. The office website verifies the passcode against the app’s backend. If the passcode is correct and within the 2-minute window, the user gains access. If incorrect or expired, they are prompted to re-enter a valid passcode.
 6. Security Features
 Passcodes are generated using secure algorithms to ensure randomness and uniqueness. The Refresh button prevents users from having to wait if the timer runs out. The app uses secure encryption for user credentials and passcodes.
+
+# Database 
+In this project, Firebase is used as the database because of its seamless integration with Android Studio, making it easy to set up and manage. Firebase provides a user-friendly interface, real-time synchronization, and secure data handling, which simplifies the implementation of authentication features like user registration, login, and passcode storage.
