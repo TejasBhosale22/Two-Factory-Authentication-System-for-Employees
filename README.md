@@ -11,3 +11,24 @@
 -Dynamic Passcodes: The app generates a unique 6-digit passcode every two minutes for each employee.
 -Enhanced Security: Prevents unauthorized access by ensuring that both credentials and the passcode are required for authentication.
 -User-Specific Codes: Passcodes are uniquely tied to each employee, ensuring secure and personalized access.
+
+# App interface
+1. User Registration
+The app provides a "Register" option for new office users. Users fill out a registration form, entering details such as:
+Full Name
+Office Email Address
+Contact Number
+Desired Password
+The entered information is securely sent to the app’s backend database. Admins verification system validate the user details. If approved, the user is added to the database and notified via email. If rejected, they are informed with a reason for denial.
+2. User Login
+Registered users can log in using their Office Email Address and Password. Credentials are verified against the database. If correct, the user gains access to the app interface. If incorrect, they receive an error message prompting them to re-enter or reset their password.
+3. Password Recovery
+If a user forgets their password, they can select the "Forgot Password" option. The app asks for the registered email address. A password reset link is sent to the user's email. Clicking the link redirects them to a secure page to set a new password. The new password is updated in the database, and the user can log in again.
+4. Passcode Interface
+Upon logging in, users are directed to the Passcode Interface. This screen displays:
+A 6-digit passcode uniquely generated for the user.
+A "Refresh" button that generates a new passcode immediately, resetting the timer.
+5. Passcode Validation
+The user views the passcode on the app and enters it on the office website's Two-Factor Authentication (2FA) page. The office website verifies the passcode against the app’s backend. If the passcode is correct and within the 2-minute window, the user gains access. If incorrect or expired, they are prompted to re-enter a valid passcode.
+6. Security Features
+Passcodes are generated using secure algorithms to ensure randomness and uniqueness. The Refresh button prevents users from having to wait if the timer runs out. The app uses secure encryption for user credentials and passcodes.
